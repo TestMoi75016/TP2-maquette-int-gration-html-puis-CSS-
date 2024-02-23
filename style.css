@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap');
+
+:root {
+   --color1: #1d1d1d;
+   --color2: white;
+}
+
+* {
+    font-family: "Inter+Tight", sans-serif; /* Tu me mets inter comme police à tout le monde et si ça marche pas tu mets sans serif*/
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box; /*il faut tout le temps loe mettre quand on fait des boites*/
+  }
+
+  li {
+     list-style: none; /*supprime les point devant les listes*/
+}
+
+p {
+    font-size: 0.8rem; /*Sachant que 1 rem = 16px*/ 
+}
+
+
+body {
+    min-height: 100vh; /*100% de l'écran de l'user*/
+    background: var(--color1);
+    color:white; /*change COULEUR du TEXTE du body*/
+
+} 
+/*--PARIE NAV--*/
+nav {
+display: flex; /*   alligner le H2 Helium et la liste*/
+justify-content: space-between; /* écarte les élements au max les uns les autres*/
+align-items: center;  /*centre VERTICALEMENT h2 Helliulm et la liste ul*/
+padding: 10px 20px;
+}
+
+nav ul {   /* Selectionnement que les ul de la nav*/
+display: flex;
+width: 50%;      /*Largeur de la liste prend 50% de l'emplacment entre le H2 et la Fin de la liste. La liste reste à droite car justify contente space beetween est actif*/
+justify-content: space-between; /* On remet un space between  pour espacer les éléments de la liste qui prennent mnt toute la place à gauche*/
+} 
+
+
+/*---HEADER---*/
+
+header {
+    display: flex;  /*L'image et les textes côte à côte*/ 
+    margin: 30px auto;  /*auto sur les côté = tu me centres horizontalement les éléments*/
+}
+
+.header-left {
+    display: flex;
+    width:50%;     /*HEADER-left prendra tjr au max 50% de son parent <header>*/
+    justify-content: center;
+    align-items: center ;
+}
+
+h1{
+font-size: 5rem;
+}
+
+.header-left-container h3 {
+color: #474dff; /*couleur fournie  par le prof*/
+font-size:1.8rem ;
+}
+
+/*--image--*/
+
+.header-right {
+width: 50%;   /*50% de largeur de la taille de son parent <header> qui est en bloc (qui est un élément qui prend toute la largeur) */
+}
+#model {   /* # pour pointer un id, ici id de l'image*/
+width: 100%; /* 100% de la largeur de son parent div class="header-right" */
+}
+
+/*---INFOS---*/
+
+.infos {
+    display: flex;
+    background: rgb(24, 24, 24);
+    border-radius: 5px;
+}
+
+.info-left {
+     width: 33%; /* 33% max de son parent qui est div class="info"*/
+}
+
+/*--boutons--*/
+/*possibilité d'aligner VERTICALEMENT les boutons avec flex-direction: column dans un display:flex*/
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /*Bouton prennent toute la place verticalement équitablement*/
+}
+
+button {
+    border:none;
+    background: #474dff;
+    color: aliceblue;  /*Couleur du texte*/
+    width: 150px;
+    padding: 10px 0; /* ' pas compris ??????' */
+    border-radius: 10px;
+    font-weight: bold;    /*mise en gras*/
+    margin: 5px; /*Les boutons sont séparés de 5px de marge entre eux*/
+
+}
+
+.info-right {
+    width: 67%;   
+}
+
+.investors {
+    display: flex;
+    align-items: center; /*centre VERTICALEMENT les élements*/
+    justify-content: center; /*centre HORIZONTALEMENT les élements*/
+    height: 80%;    /*80% de la place proposée ???? pas compris*/
+}    
+
+.investors-container {
+display:flex;
+justify-content: space-around;
+width:100% /*On voyait dans la console qu'il ne prennait pas 100% de son espace alloué*/
+}
+
+.investors-container img{
+height: 60px;     /*hauteur 60px max pour tous les logos de investors-container. Du coup comme ils sont plus petits ça fait que les boutons se rapprochent entre eux verticalement.*/
+}
+
