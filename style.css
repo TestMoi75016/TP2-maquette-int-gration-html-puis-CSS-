@@ -6,10 +6,10 @@
 }
 
 * {
-    font-family: "Inter+Tight", sans-serif; /* Tu me mets inter comme police à tout le monde et si ça marche pas tu mets sans serif*/
+    font-family: "Inter+Tight:ital", sans-serif; /* Tu me mets inter comme police à tout le monde et si ça marche pas tu mets sans serif*/
     margin: 0;
-    padding: 5px;
-    box-sizing: border-box; /*il faut tout le temps loe mettre quand on fait des boites*/
+    padding: 5px;  /*TOUS les éléments ont un padding de 5px sur TOUS leurs côtés*/
+    box-sizing: border-box; /*il faut tout le temps le mettre quand on fait des boites*/
   }
 
   li {
@@ -27,7 +27,7 @@ body {
     color:white; /*change COULEUR du TEXTE du body*/
 
 } 
-/*--PARIE NAV--*/
+/*--PARTIE NAV--*/
 nav {
 display: flex; /*   alligner le H2 Helium et la liste*/
 justify-content: space-between; /* écarte les élements au max les uns les autres*/
@@ -38,7 +38,7 @@ padding: 10px 20px;
 nav ul {   /* Selectionnement que les ul de la nav*/
 display: flex;
 width: 50%;      /*Largeur de la liste prend 50% de l'emplacment entre le H2 et la Fin de la liste. La liste reste à droite car justify contente space beetween est actif*/
-justify-content: space-between; /* On remet un space between  pour espacer les éléments de la liste qui prennent mnt toute la place à gauche*/
+justify-content: space-between; /* On remet un space between  pour espacer les éléments de la liste qui prennent mnt toute la place à droite*/
 } 
 
 
@@ -46,11 +46,11 @@ justify-content: space-between; /* On remet un space between  pour espacer les �
 
 header {
     display: flex;  /*L'image et les textes côte à côte*/ 
-    margin: 30px auto;  /*auto sur les côté = tu me centres horizontalement les éléments*/
+    margin: 30px auto;  /*auto sur les côté = tu me centres horizontalement les éléments. 30px d'espace entre le header et la nav et entre le header et la partie infos*/
 }
 
 .header-left {
-    display: flex;
+    display: flex; /* ??? pas compris*/
     width:50%;     /*HEADER-left prendra tjr au max 50% de son parent <header>*/
     justify-content: center;
     align-items: center ;
@@ -99,7 +99,7 @@ button {
     background: #474dff;
     color: aliceblue;  /*Couleur du texte*/
     width: 150px;
-    padding: 10px 0; /* ' pas compris ??????' */
+    padding: 10px 0; /* 10px entre le texte à l'intérieur et le haut du bouton, 10px entre le texte à l'intérieur et le bas du bouton. Donc le bouton grossis. */
     border-radius: 10px;
     font-weight: bold;    /*mise en gras*/
     margin: 5px; /*Les boutons sont séparés de 5px de marge entre eux*/
@@ -114,12 +114,12 @@ button {
     display: flex;
     align-items: center; /*centre VERTICALEMENT les élements*/
     justify-content: center; /*centre HORIZONTALEMENT les élements*/
-    height: 80%;    /*80% de la place proposée ???? pas compris*/
+    height: 80%;    /*Force div class="investors" à prendre 80% de la place proposée en hauteur par info-right car on voit dans la console qu'il ne prennait que 50% de hauteur*/
 }    
 
 .investors-container {
 display:flex;
-justify-content: space-around;
+justify-content: space-around; /*Bouton prennent toute la place verticalement équitablement*/
 width:100% /*On voyait dans la console qu'il ne prennait pas 100% de son espace alloué*/
 }
 
@@ -127,3 +127,77 @@ width:100% /*On voyait dans la console qu'il ne prennait pas 100% de son espace 
 height: 60px;     /*hauteur 60px max pour tous les logos de investors-container. Du coup comme ils sont plus petits ça fait que les boutons se rapprochent entre eux verticalement.*/
 }
 
+/*Ajout perso*/
+button:hover {
+    cursor: pointer;
+    animation: btnanim 1s infinite linear;
+}
+
+@keyframes btnanim {
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:active {
+    background: rgb(68, 227, 68);
+}
+
+@media screen and (max-width: 760px) {
+   header {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+   }
+   .header-left-container {
+    width: 100%;
+   }
+ 
+   .header-left {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+   }
+
+   h1 {
+    font-size: 3rem;
+   }
+
+   .header-right {
+    width: 80%;
+    margin: 0 auto;
+   }
+   .infos {
+    display: block;
+   }
+    
+   .info-left {
+    width: 80%;
+    margin: 0 auto;
+   }
+
+   .info-left h3 {
+    text-align: center;
+   }
+
+
+   .btn-container {
+    display: block;
+   }
+
+   .info-right h3 {
+    text-align: center;
+   }
+   
+  .info-right {
+    display: block;
+    width: 100%;
+  }
+
+  .investors {
+    width: 100%;
+  }
+}
