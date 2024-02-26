@@ -167,6 +167,10 @@ button:active {
 
    h1 {
     font-size: 3rem;
+    text-align: center;
+   }
+   h3 {
+    text-align: center;
    }
 
    .header-right {
@@ -205,6 +209,12 @@ button:active {
 
   .investors {
     width: 100%;
+  }
+
+  .investors-container {
+    justify-content: space-evenly;
+    
+
   }
 }
 
