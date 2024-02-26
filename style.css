@@ -210,7 +210,8 @@ button:active {
 
 /*mobile*/
 @media screen and (max-width: 393px) {
-/*Taille mobile établi par Brave (chrome) avec référence iPhone 12*/
+/*Taille mobile établi par Brave (chrome) avec référence iPhone 15*/
+/*Impossible de tenir le grid btn container car bouton "proof of coverage" prend trop de largeur*/
     .header-left-container {
         display: block;
         
@@ -234,11 +235,16 @@ button:active {
         text-align: justify;
     }
 
-    button {
+
+    .info-left {
         width: 100%;
+    }
+    button {
+        width: 90%;
     }
 
     .btn-container {
+        display: flex;
         align-items: center;
         justify-content: center;
     }
