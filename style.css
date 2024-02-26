@@ -146,7 +146,10 @@ button:active {
     background: rgb(68, 227, 68);
 }
 
-@media screen and (max-width: 760px) {
+/*______ RESPONSIVE_______*/
+/*Tablette*/
+@media screen and (max-width: 1024px) {
+    /*Taille tablette établie par Brave (chrome) avec référence iPad Pro*/ 
    header {
     display: block;
     width: 80%;
@@ -185,8 +188,11 @@ button:active {
 
 
    .btn-container {
-    display: block;
+    display: grid;
+    grid-template-columns: 33% 33% 33%; 
+    justify-items: center;  /*Centrer horizontalement élement en grid*/
    }
+
 
    .info-right h3 {
     text-align: center;
@@ -200,4 +206,44 @@ button:active {
   .investors {
     width: 100%;
   }
+}
+
+/*mobile*/
+@media screen and (max-width: 390px) {
+/*Taille mobile établi par Brave (chrome) avec référence iPhone 12*/
+    .header-left-container {
+        display: block;
+        
+    } 
+    .header-left {
+          width: 100%; /*Si je ne  mets pas 100% dans le parent de header-left-container qui est ici header-left alors l'enfant refuse de prendre 100% de width et reste bloqué à 80%*/
+    } 
+
+    h1 {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-left-container h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.6rem;
+        text-align: justify;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .btn-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
 }
