@@ -209,7 +209,7 @@ button:active {
 }
 
 /*mobile*/
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 393px) {
 /*Taille mobile établi par Brave (chrome) avec référence iPhone 12*/
     .header-left-container {
         display: block;
