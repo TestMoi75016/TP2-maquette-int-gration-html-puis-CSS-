@@ -148,7 +148,7 @@ button:active {
 
 /*______ RESPONSIVE_______*/
 /*Tablette*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 834px) {
     /*Taille tablette établie par Brave (chrome) avec référence iPad Pro*/ 
    header {
     display: block;
